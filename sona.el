@@ -20,6 +20,19 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+;;; Installation
+
+;; Install package
+;; (package-install 'sona)
+;;
+;;; Usage
+;;
+;; To use, run `sona' and input your Sona query. A new buffer named
+;; `*Sona*' will appear. It works identically to the standard `grep'
+;; buffers, so the usual hotkeys like `M-g M-n' and `M-g M-p' work
+;; great.
+;;
+
 ;;; Commentary:
 
 ;; This is a simple wrapper for my Python-aware search tool, Sona. If
@@ -39,6 +52,7 @@
   "Utility function that names the `compile' mode."
   "*Sona*")
 
+;;;###autoload
 (defun sona (query)
   (interactive "sSona Query: ")
   ;; if `vc-responsible-backend' returns a Git backend then we can
